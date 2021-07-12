@@ -83,7 +83,7 @@ public class HttpOutboundHandler {
         final HttpGet httpGet = new HttpGet(url);
         //httpGet.setHeader(HTTP.CONN_DIRECTIVE, HTTP.CONN_CLOSE);
         httpGet.setHeader(HTTP.CONN_DIRECTIVE, HTTP.CONN_KEEP_ALIVE);
-        httpGet.setHeader("mao", inbound.headers().get("mao"));
+        httpGet.setHeader("xjava", inbound.headers().get("xjava"));
 
         httpclient.execute(httpGet, new FutureCallback<HttpResponse>() {
             @Override
